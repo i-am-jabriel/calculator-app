@@ -1,5 +1,6 @@
 body{
     background-color:#fdfcdc;
+    overflow: hidden;
 }
 .main-container{
     display: flex;
@@ -18,13 +19,16 @@ button{
     height:40px;
     background-color:#fed9b7;
     border:1px solid transparent;
-    transition:all 0.3s;
+    transition:all 0.2s;
     padding:10px;
     margin:2px;
     cursor: pointer;
+    opacity:0.9;
 }
 button:hover{
     background-color:#E4C3A4;
+    font-size:1.1em;
+    opacity:1;
 }
 button:active{
     background-color:#f07167;
@@ -53,14 +57,27 @@ button.small{
     position:relative;
     top:0;
     left:0;
-    border-radius:40px;
+    border-radius:5%;
     border:1px solid black;
     background: rgba(255, 255, 255, 0.4);
     /* width: 200px; */
     float:left;
-    padding: 20px 40px;
+    padding: 25px 15px;
     display:flex;
     flex-direction: column;
     justify-content: center;
     user-select: none;
+    box-shadow:rgba(0, 0, 0, 0.2) 10px 10px 20px;
+}
+#add-button{
+     position: absolute;
+    font-size: 2em;
+    font-weight: bolder;
+    bottom:0;
+    right:0px;
+    width:auto;
+    text-align: center;
+}
+.b, .b > button{
+    font-weight:bold;
 }
