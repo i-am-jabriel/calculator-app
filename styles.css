@@ -1,10 +1,33 @@
+/*
+ Theme:
+https://coolors.co/0081a7-00afb9-fdfcdc-fed9b7-f07167
+
+#0081a7 #00afb9 #fdfcdc #fed9b7 #f07167
+
+*/
 body{
-    background-color:#fdfcdc;
+    
     overflow: hidden;
+    margin:0;
 }
-.main-container{
+#background{
+    background-color:#fdfcdc;
+    position: fixed;
+    z-index:-1;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+}
+#main-container{
+    height:100vh;
+}
+.right{
+    align-self: flex-end;
+}
+.calculator-container{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 .row{
     display: flex;
@@ -15,19 +38,20 @@ body{
     flex-direction: column;
 }
 button{
-    width:50px;
-    height:40px;
+    width:3.5em;
+    height:3.5em;
+    font-size:1em;
     background-color:#fed9b7;
     border:1px solid transparent;
     transition:all 0.2s;
-    padding:10px;
-    margin:2px;
+    padding:0.75em;
+    margin:0.1em;
     cursor: pointer;
     opacity:0.9;
 }
 button:hover{
     background-color:#E4C3A4;
-    font-size:1.1em;
+    font-weight: 150%;
     opacity:1;
 }
 button:active{
@@ -38,20 +62,16 @@ button:focus{
     outline:none;
 }
 .cal-total{
-    width:200px;
     text-align:right;
-    height:20px;
+    height:0.5em;
 }
 #history-screen{
     opacity: 0.8;
     font-size:0.8em;
 }
-button.small{
-    font-size: 10px;
-}
 #sign{
-    text-align:right;
-    position: absolute;
+    text-align:left;
+    position: relative;
 }
 #calculator{
     position:relative;
@@ -59,10 +79,9 @@ button.small{
     left:0;
     border-radius:5%;
     border:1px solid black;
-    background: rgba(255, 255, 255, 0.4);
-    /* width: 200px; */
+    background: rgba(255, 255, 255, 0.5);
     float:left;
-    padding: 25px 15px;
+    padding: 1.2em 0.8em;
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -70,14 +89,26 @@ button.small{
     box-shadow:rgba(0, 0, 0, 0.2) 10px 10px 20px;
 }
 #add-button{
-     position: absolute;
-    font-size: 2em;
+    position: absolute;
+    font-size: 1.5em;
     font-weight: bolder;
     bottom:0;
-    right:0px;
+    right:0;
     width:auto;
     text-align: center;
 }
 .b, .b > button{
     font-weight:bold;
+}
+#options-tab{
+    width:250px;
+    background:#67aeb3;
+    transition: height 0.5s ease-out;
+    right:0;
+    position: absolute;;
+    z-index:4;
+    bottom:0;
+    color:#fff;
+    overflow:hidden;
+    align-items: center;
 }

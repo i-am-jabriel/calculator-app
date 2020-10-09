@@ -2,61 +2,73 @@
 <html>
     <head>
         <link href= "styles.css" rel= "stylesheet"/>
-        <title>Updated Calculator</title>
-        <body>
+        <title>Calculator Project</title>
+    </head>
+    <body>
+        <div id='main-container'>
+            <div id='background'></div>
+
             <div id='calculator'>
-                
                 <p class= "cal-total" id='history-screen'></p>
-                <span id='sign'></span><p class= "cal-total" id='screen'>0</p>
-                <div class= "main-container">
-                    
+                <span id='sign'></span><p class= "cal-total" id='screen'></p>
+                <div class= "calculator-container">
                     <div class= "col">
                         <div class='row'>
                             <button class='small'>mc</button>
                             <button class='small'>m+</button>
                             <button class='small'>m-</button>
+                            <button class='small'>m</button>
                         </div>
                         <div class="row">
                             <button class='small'>%</button>
                             <button class='small'>C</button>
                             <button class='small'>CE</button>
+                            <button class='small'>⌫</button>
                         </div>
-                        <div class="row b">
-                            <button>7</button>
-                            <button>8</button>
-                            <button>9</button>
+                        <div class="row">
+                            <button class='b'>7</button>
+                            <button class='b'>8</button>
+                            <button class='b'>9</button>
+                            <button>÷</button>
                         </div>
-                        <div class="row b">
-                            <button>4</button>
-                            <button>5</button>
-                            <button>6</button>
+                        <div class="row">
+                            <button class='b'>4</button>
+                            <button class='b'>5</button>
+                            <button class='b'>6</button>
+                            <button>×</button>
                         </div>
-                        <div class="row b">
-                            <button>1</button>
-                            <button>2</button>
-                            <button>3</button>
+                        <div class="row">
+                            <button class='b'>1</button>
+                            <button class='b'>2</button>
+                            <button class='b'>3</button>
+                            <button>-</button>
                         </div>
                         <div class="row">
                             <button>+/-</button>
                             <button class='b'>0</button>
                             <button>.</button>
+                            <button>+</button>
                         </div>
                     </div>
                     <div class= "col">
-                        <button class='small'>m</button>
-                        <button class='small'>⌫</button>
-                        <button>÷</button>
-                        <button>×</button>
-                        <button>-</button>
-                        <button>+</button>
-                        <button>=</button>
+                            <button class='right'>=</button>
+                        </div>
                     </div>
                 </div>
-            </div>
             <button id='add-button'>^</button>
-                
+            </div>
+            <div class='col' id='options-tab' style='height:0vh'>
+                <h2>Options</h2>
+                <div class='row'>
+                    <h5>Hue</h5>
+                    <input type="range" min="0" max="360" value="0" class="slider" id="hue-slider">
+                </div>
+                <div class='row'>
+                    <h5>Font Size</h5>
+                    <input type="range" min="50" max="150" value="100" class="slider" id="font-slider">
+                </div>
+            </div>
             <script src='calc.js'></script>
-        </body>
-
-    </head>
+        </div>
+    </body>
 </html>
