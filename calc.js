@@ -80,7 +80,7 @@ function processInput(key){
                 else memoryRecall -= val;
                 break;
             case '%':
-                historyScreen.innerHTML = historyText = val = solve(historyText + calcText) * 0.01;
+                historyScreen.innerHTML = historyText = solve(historyText + calcText) * 0.01;
                 calcText = '';
                 break;
             case '^':
