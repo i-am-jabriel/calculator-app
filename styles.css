@@ -38,9 +38,9 @@ body{
     flex-direction: column;
 }
 button{
-    width:3.5em;
-    height:3.5em;
-    font-size:1em;
+    width:3em;
+    height:3em;
+    font-size:0.9em;
     background-color:#fed9b7;
     border:1px solid transparent;
     transition:all 0.2s;
@@ -63,11 +63,12 @@ button:focus{
 }
 .cal-total{
     text-align:right;
-    height:0.5em;
+    font-size:1.2em;
+    height:0.8em;
 }
 #history-screen{
     opacity: 0.8;
-    font-size:0.8em;
+    background:linear-gradient(rgba(255,255,255,0.1),rgba(255,255,255,0.9));
 }
 #sign{
     text-align:left;
@@ -88,6 +89,9 @@ button:focus{
     user-select: none;
     box-shadow:rgba(0, 0, 0, 0.2) 10px 10px 20px;
 }
+button, #calculator p{
+    font-family: 'Quicksand', sans-serif;
+}
 #add-button{
     position: absolute;
     font-size: 1.5em;
@@ -101,7 +105,7 @@ button:focus{
     font-weight:bold;
 }
 #options-tab{
-    width:250px;
+    width:calc(200px+2em);
     background:#67aeb3;
     transition: height 0.5s ease-out;
     right:0;
@@ -111,4 +115,14 @@ button:focus{
     color:#fff;
     overflow:hidden;
     align-items: center;
+    font-family: 'IBM Plex Mono', monospace;
+}
+#option-tab:hover{
+    padding:20px 15px;
+}
+.copy{
+    position: absolute;
+    bottom:0;
+    font-size:10px;
+    font-family: 'Quicksand', sans-serif;
 }

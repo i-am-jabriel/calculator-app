@@ -59,7 +59,6 @@ function processInput(key){
                 calcText = '';
                 break;
             case '=':
-
                 //Clear History if no last operator
                 if(!lastOperator) historyText = '';
 
@@ -187,5 +186,5 @@ hueSlider.addEventListener('input',function(){
     mainContainer.style.filter=`hue-rotate(${this.value}deg)`;
 });
 fontSlider.addEventListener('input',function(){
-    calculator.style['font-size']=`${this.value}%`;
+    body.style['font-size']=`${this.value}%`;
 });
